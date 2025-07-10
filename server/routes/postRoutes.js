@@ -5,7 +5,7 @@ const { postValidation} = require('../middlewares/validationMiddleware');
 const protect = require('../middlewares/auth');
 const assignAuthor = require('../middlewares/assignAuthor');
 
-// Post Routes
+router.get('/search', postController.searchPosts);
 router.post('/',protect, assignAuthor, postValidation, postController.createPost);
 router.get('/', postController.getPosts);
 router.get('/:id',protect, postController.getPostId);
