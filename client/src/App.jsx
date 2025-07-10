@@ -3,19 +3,19 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/home';
-import PostDetails from './pages/postDetails';
+import SinglePost from './components/singlePost';
 import CreatePost from './pages/createPost';
 import EditPost from './pages/editPost';
 import Login from './pages/login';
 import Register from './pages/register';
-import ProtectedRoute from './components/protectedRoute';
+import ProtectedRoute from './utils/protectedRoute';
 
 const App = () => (
   <Router>
     <Layout>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/posts/:id" element={<PostDetails />} />
+        <Route path="/posts/:id" element={<SinglePost/>} />
         <Route
           path="/create"
           element={
@@ -25,7 +25,7 @@ const App = () => (
           }
         />
         <Route
-          path="/edit/:id"
+          path="/edit-post/:id"
           element={
             <ProtectedRoute>
               <EditPost />

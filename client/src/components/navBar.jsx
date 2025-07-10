@@ -1,5 +1,3 @@
-
-// --- src/components/Navbar.jsx ---
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 
@@ -7,8 +5,8 @@ const Navbar = () => {
   const { user, logout } = useAuth();
 
   return (
-    <nav className="flex justify-between p-4 bg-gray-800 text-white">
-      <Link to="/" className="text-xl font-bold">BlogApp</Link>
+    <nav className="flex justify-between p-4 bg-sky-950 text-white">
+      <Link to="/" className="text-xl font-bold">tBlogA</Link>
       <div>
         {user ? (
           <>
@@ -27,4 +25,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
 

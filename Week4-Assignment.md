@@ -35,20 +35,12 @@ Build a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application tha
 - Use React hooks for state management (useState, useEffect, useContext)
 - Create a custom hook for API calls
 
-###import { Link } from 'react-router-dom';
-
-const Navbar = () => {
-  return (
-    <nav className="flex justify-between p-4 bg-gray-800 text-white">
-      <Link to="/">BlogApp</Link>
-      <div>
-        <Link to="/create" className="mr-4">Create Post</Link>
-      </div>
-    </nav>
-  );
-};
-
-export default Navbar;
+### Task 4: Integration and Data Flow
+- Implement API service in React to communicate with the back-end
+- Set up state management for posts and categories
+- Create forms with proper validation for creating and editing posts
+- Implement optimistic UI updates for better user experience
+- Handle loading and error states for API calls
 
 ### Task 5: Advanced Features
 - Add user authentication (registration, login, protected routes)
